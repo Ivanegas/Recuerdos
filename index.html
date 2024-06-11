@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <title>Álbum de Fotos</title>
+</head>
+<body>
+    <h1>9 meses, 9 recuerdos 💙🥰</h1>
+    <div class="gallery">
+        <div class="photo-container" onclick="showImage(this)">
+            <span>Esta fue la primera <br>foto que me enviaste.</span>
+            <img src="1.jpeg" alt="Foto 1">
+        </div>
+        <div class="photo-container" onclick="showImage(this)">
+            <span>Esta fue cuando teniamos dos meses <br> y me presentaste a tu mamá.</span>
+            <img src="2.jpeg" alt="Foto 2">
+        </div>
+        <div class="photo-container" onclick="showImage(this)">
+            <span>Tres meses en diciembre <br> y aunque tenias que estar <br> con tu papá y Karen  <br> tu me seguias escribiendo y <br> me enviaste esta foto.</span>
+            <img src="3.jpeg" alt="Foto 3">
+        </div>
+        <div class="photo-container" onclick="showImage(this)">
+            <span>En el cuarto mes tuvimos <br> una de las llamadas mas largas <br> en la cual nos contamos muchas cosas <br> uno del otro y te tome esta foto <br> porque te mirabas hermosa.</span>
+            <img src="4.2.jpeg" alt="Foto 4">
+        </div>
+        <div class="photo-container" onclick="showImage(this)">
+            <span>En el quito mes recuerdo la envista que tuviste <br> para la empresa que te llamo y te preparaste y solo me dijiste asi me veo.</span>
+            <img src="4.jpeg" alt="Foto 5">
+        </div>
+        <div class="photo-container" onclick="showImage(this)">
+            <span>Sexto mes y tu primer dia de oficina <br> recuerdo lo emocionada que estabas por conocer <br> a tus compañeros y las instalaciones.</span>
+            <img src="5.jpeg" alt="Foto 6">
+        </div>
+        <div class="photo-container" onclick="showImage(this)">
+            <span>Septimo mes te envie flores a manera de sorpresa...<br> pero te enteraste por la direccion pero no<br> me arrepiento de la direccion  ya que pude ver esa sonrisa.</span>
+            <img src="6.jpeg" alt="Foto 7">
+        </div>
+        <div class="photo-container" onclick="showImage(this)">
+            <span>Octavo mes creamos un server de minecraft <br> en el cual hice un restaurante solo para nosotros <br> y te di la camiseta de uno de los jugadores de Millo y te recite un poema.</span>
+            <img src="10.jpeg" alt="Foto 8">
+        </div>
+        <div class="photo-container" onclick="showImage(this)">
+            <span>Noveno mes, hoy estamos cumpliendo un mes mas <br> gracias por siempre estar y darme fuerzas para seguir adelante.</span>
+            <img src="8.jpeg" alt="Foto 9">
+        </div>
+        <div class="photo-container" onclick="showImage(this)">
+            <span>Si fueramos pinguinos seriamos estos dos.</span>
+            <video controls start="10">
+                <source src="video.mp4" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+            </video>
+        </div>
+    </div>
+    <script>
+        function showImage(container) {
+            var span = container.querySelector('span');
+            var img = container.querySelector('img');
+            var video = container.querySelector('video');
+
+            span.style.display = 'none';
+            if (img) {
+                img.style.display = 'block';
+            }
+            if (video) {
+                video.style.display = 'block';
+            }
+
+            var nextContainer = container.nextElementSibling;
+            if (nextContainer) {
+                nextContainer.style.display = 'flex';
+            }
+        }
+    </script>
+</body>
+</html>
